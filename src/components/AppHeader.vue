@@ -25,13 +25,14 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@import '../style/partials/mixins.scss';
+
     header {
         padding: 10px;
     }
     .container {
-        display: flex;
+        @include flexCenter;
         justify-content: space-between;
-        align-items: center;
             img {
                 width: 50px;
             }
