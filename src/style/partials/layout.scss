@@ -1,6 +1,10 @@
 // LAYOUT
 
 .container{
-    margin: 0 auto;
-    max-width: var(--container-size);
+    margin: auto;
+    width: var(--container-size);
+}
+
+body {
+    height: 100vh;
 }
