@@ -5,8 +5,21 @@ export default {
 </script>
 
 <template>
-  <h1>Main</h1>
+  <div class="content">
+    <h2>-->Content goes here..>--</h2>
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+  .content {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+      h2 {
+        color: #fff;
+      }
+  }
+  
 </style>
