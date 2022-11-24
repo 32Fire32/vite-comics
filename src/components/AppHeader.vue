@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <img src="../assets/" alt="game">
+    <img src="../assets/dc-logo.png" alt="dclogo">
 </template>
 
 <style scoped>
