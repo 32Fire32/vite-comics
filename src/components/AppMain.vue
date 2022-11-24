@@ -35,11 +35,11 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@import '../style/partials/mixins.scss';
   .content {
     height: 100px;
     background-color: #000;
-    display: flex;
-    align-items: center;
+    @include flexCenter;
       h2 {
         color: #fff;
       }
@@ -54,8 +54,7 @@ export default {
         }
         .shop-link {
             width: calc(100% / 5);
-            display: flex;
-            align-items: center;
+            @include flexCenter;
             font-size: 1 rem;
                 img {
                     width: 50px;

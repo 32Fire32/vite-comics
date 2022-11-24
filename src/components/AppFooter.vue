@@ -110,12 +110,16 @@ export default {
     .footer-bottom {
         height: 100px;
         background-color:var(--secondary-color);
-        display: flex;
+        
+        @mixin flexCenter {
+        display: flex ;
         align-items: center;
+}
+        @include flexCenter;
         .container {
-            display: flex;
             justify-content: space-between;
-            align-items: center;
+            @include flexCenter;
+
             button {
                 border: 1px solid var(--primary-color);
                 background-color: var(--secondary-color);
