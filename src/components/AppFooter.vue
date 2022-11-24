@@ -30,10 +30,12 @@ export default {
             <div class="container">
                 <div class="footer-links">
                 <ul>
-                    <li>Link</li>
-                    <li>Link</li>
-                    <li>Link</li>
-                    <li>Link</li>                    
+                    <li><a href="#">LINK</a></li>
+                    <li><a href="#">LINK</a></li>
+                    <li><a href="#">LINK</a></li>
+                    <li><a href="#">LINK</a></li>
+                    <li><a href="#">LINK</a></li>
+                    <li><a href="#">LINK</a></li>                 
                 </ul>
                 </div>
                 <div class="big-logo">
@@ -87,9 +89,22 @@ export default {
     .footer-bg {
         background-image: url(../assets/footer-bg.jpg);
         height: 300px;
+        z-index: -2;
         .container {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color:#fff;
+        }
+        .big-logo {
+            z-index: -1;
         }
     }
 
