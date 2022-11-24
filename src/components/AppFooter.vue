@@ -70,7 +70,6 @@ export default {
     
     .footer-bg {
         background-image: url(../assets/footer-bg.jpg);
-        height: 300px;
         img {
             width: 50%;
         }
@@ -79,6 +78,7 @@ export default {
             justify-content: space-between;
             align-items: center;
             height: 100%;
+            position: relative;
             .footer-links {
                 display: flex;
                 .links {
@@ -87,11 +87,14 @@ export default {
             }
             img {
                 width: 30%;
+                position: absolute;
+                right: 0;
                 }        
         }
 
         h3 {
             color: #fff;
+            margin: 10px 0;
         }
 
         ul {
