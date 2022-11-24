@@ -1,6 +1,11 @@
 <script>
+import AppLogoBg from './AppLogoBg.vue'
 export default {
   name: 'AppFooter',
+  components: {
+    AppLogoBg
+  },
+
   data() {
       return {
          dcComics: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News' ],
@@ -11,9 +16,6 @@ export default {
       }
     }
 }
-
-
-
 </script>
 
 <template>
@@ -22,6 +24,7 @@ export default {
             <div class="container">
                 <div class="footer-links">
                     <div class="links">
+                        <AppLogoBg/>  
                         <h3>DC COMICS</h3>
                         <ul>
                             <li v-for="comic in dcComics"><a href="#">{{ comic }}</a></li>               
@@ -42,12 +45,13 @@ export default {
                         <ul>
                             <li v-for="site in sites"><a href="#">{{ site }}</a></li>               
                         </ul>
-                    </div>              
+                    </div> 
+                               
                 </div>
-                    <img src="../assets/dc-logo-bg.png" alt="logobg">
             </div>            
         </div>
         <div class="footer-bottom">
+            <AppDcLogoBg/>
             <div class="container">
                     <button>SIGN-UP NOW!</button>
                 <div class="social">
@@ -59,26 +63,21 @@ export default {
                     <img src="../assets/footer-periscope.png" alt="peri">
                 </div>
             </div>
-        </div>
-        
+        </div>        
     </footer>
-        
-  
 </template>
 
 <style scoped lang="scss">
     
     .footer-bg {
         background-image: url(../assets/footer-bg.jpg);
-        img {
-            width: 50%;
-        }
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100%;
             position: relative;
+            
             .footer-links {
                 display: flex;
                 .links {
