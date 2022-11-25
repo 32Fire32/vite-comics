@@ -1,13 +1,36 @@
 <script>
-import AppLogoBg from "./AppLogoBg.vue";
+import AppShopLink from "./AppShopLink.vue";
 export default {
   name: "AppFooter",
   components: {
-    AppLogoBg,
+    AppShopLink,
   },
 
   data() {
     return {
+      shopLinks: [
+        {
+          img: "src/assets/buy-comics-digital-comics.png",
+          text: "DIGITAL COMICS",
+        },
+        {
+          img: "src/assets/buy-comics-merchandise.png",
+          text: "DC MERCHANDISE",
+        },
+        {
+          img: "src/assets/buy-comics-subscriptions.png",
+          text: "SUBSCRIPTIONS",
+        },
+        {
+          img: "src/assets/buy-comics-shop-locator.png",
+          text: "COMIC SHOP LOCATOR",
+        },
+        {
+          img: "src/assets/buy-dc-power-visa.svg",
+          text: "DC POWER VISA",
+        },
+      ],
+
       dcComics: [
         "Characters",
         "Comics",
@@ -41,34 +64,8 @@ export default {
   <footer>
     <nav class="info-nav">
       <div class="container">
-        <div class="shop-link">
-          <img
-            src="../assets/buy-comics-digital-comics.png"
-            alt="digitalcomics"
-          /><a href="#">DIGITAL COMICS</a>
-        </div>
-        <div class="shop-link">
-          <img src="../assets/buy-comics-merchandise.png" alt="merchandise" /><a
-            href="#"
-            >DC MERCHANDISE</a
-          >
-        </div>
-        <div class="shop-link">
-          <img
-            src="../assets/buy-comics-subscriptions.png"
-            alt="subscriptions"
-          /><a href="#">SUBSCRIPTION</a>
-        </div>
-        <div class="shop-link">
-          <img src="../assets/buy-comics-shop-locator.png" alt="shop" /><a
-            href="#"
-            >COMIC SHOP LOCATOR</a
-          >
-        </div>
-        <div class="shop-link">
-          <img src="../assets/buy-dc-power-visa.svg" alt="visa" /><a href="#"
-            >DC POWER VISA
-          </a>
+        <div class="shop-link" v-for="shop in shopLinks">
+          <AppShopLink :imgSrc="shop.img" :shopText="shop.text" />
         </div>
       </div>
     </nav>
@@ -105,7 +102,9 @@ export default {
               </li>
             </ul>
           </div>
-          <AppLogoBg />
+        </div>
+        <div class="logoBg">
+          <img src="../assets/dc-logo-bg.png" alt="logobg" />
         </div>
       </div>
     </div>
@@ -136,18 +135,9 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
-  }
-  .shop-link {
-    width: calc(100% / 5);
-    @include flexCenter;
-    font-size: 1 rem;
-    img {
-      width: 50px;
-      margin-right: 10px;
-    }
-    a {
-      text-decoration: none;
+    .shop-link {
       color: #fff;
+      @include flexCenter;
     }
   }
 }
@@ -159,17 +149,17 @@ export default {
     align-items: center;
     height: 100%;
     position: relative;
-
+    img {
+      right: 0;
+      top: -60px;
+      width: 30%;
+      position: absolute;
+    }
     .footer-links {
       display: flex;
       .links {
         padding: 10px;
       }
-    }
-    img {
-      width: 30%;
-      position: absolute;
-      right: 0;
     }
   }
 

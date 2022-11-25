@@ -109,7 +109,7 @@ export default {
       </div>
       <div class="container">
         <AppButton />
-        <div class="cards" v-for="(comic, index) in comics">
+        <div class="cards" v-for="comic in comics">
           <AppCard :imgSrc="comic.thumb" :text="comic.series" />
         </div>
       </div>
