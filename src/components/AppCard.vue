@@ -10,8 +10,8 @@ export default {
 
 <template>
   <div class="card">
-    <img src="" alt="" />
-    <h3></h3>
+    <img :src="imgSrc" :alt="text" />
+    <h3>{{ text }}</h3>
   </div>
 </template>
 
@@ -19,7 +19,13 @@ export default {
 .card {
   height: 100px;
   width: calc(var(--container-size) / 6);
-  background-color: red;
   border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
 }
 </style>

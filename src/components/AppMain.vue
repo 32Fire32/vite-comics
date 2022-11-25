@@ -106,8 +106,8 @@ export default {
         <img src="../assets/jumbotron.jpg" alt="jumbo" />
       </div>
       <div class="container">
-        <div class="cards" v-for="comic in comics">
-          <AppCard />
+        <div class="cards" v-for="(comic, index) in comics">
+          <AppCard :imgSrc="comic.thumb" :text="comic.series" />
         </div>
       </div>
     </div>
