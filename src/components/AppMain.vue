@@ -1,9 +1,11 @@
 <script>
 import AppCard from "./AppCard.vue";
+import AppButton from "./AppButton.vue";
 export default {
   name: "AppMain",
   components: {
     AppCard,
+    AppButton,
   },
 
   data() {
@@ -106,6 +108,7 @@ export default {
         <img src="../assets/jumbotron.jpg" alt="jumbo" />
       </div>
       <div class="container">
+        <AppButton />
         <div class="cards" v-for="(comic, index) in comics">
           <AppCard :imgSrc="comic.thumb" :text="comic.series" />
         </div>
@@ -143,9 +146,10 @@ main {
     }
   }
   .container {
-    padding: 20px 0;
+    padding: 40px 0;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     .cards {
       display: flex;
       flex-wrap: wrap;
