@@ -106,7 +106,9 @@ export default {
         <img src="../assets/jumbotron.jpg" alt="jumbo" />
       </div>
       <div class="container">
-        <AppCard />
+        <div class="cards" v-for="comic in comics">
+          <AppCard />
+        </div>
       </div>
     </div>
   </main>
@@ -115,9 +117,7 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/mixins.scss" as *;
 .content {
-  @include flexCenter;
   .jumbo {
-    background-color: red;
     width: 100%;
     height: 280px;
     img {
@@ -125,6 +125,14 @@ export default {
       object-position: top;
       height: 100%;
       width: 100%;
+    }
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }
