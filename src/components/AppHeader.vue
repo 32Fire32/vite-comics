@@ -1,6 +1,11 @@
 <script>
+import AppBlue from "./AppBlue.vue";
 export default {
   name: "AppHeader",
+  components: {
+    AppBlue,
+  },
+
   data() {
     return {
       navLinks: [
@@ -27,7 +32,8 @@ export default {
         <img src="../assets/dc-logo.png" alt="dcLogo" />
       </div>
       <nav>
-        <ul>
+        <AppBlue />
+        <ul class="nav_header">
           <li v-for="link in navLinks">
             <a href="#">{{ link }}</a>
           </li>
@@ -50,6 +56,10 @@ header {
     width: 50px;
   }
 }
+nav {
+  position: relative;
+}
+
 ul {
   display: flex;
 

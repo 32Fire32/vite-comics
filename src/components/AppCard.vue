@@ -32,5 +32,8 @@ export default {
     object-fit: cover;
     width: 100%;
   }
+  h3 {
+    margin-top: 20px;
+  }
 }
 </style>

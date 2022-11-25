@@ -137,7 +137,7 @@ main {
 .content {
   .jumbo {
     width: 100%;
-    height: 280px;
+    height: 400px;
     img {
       object-fit: cover;
       object-position: top;
