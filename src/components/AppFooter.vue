@@ -125,8 +125,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../style/partials/mixins.scss" as *;
-
 .info-nav {
   position: relative;
   z-index: 2;

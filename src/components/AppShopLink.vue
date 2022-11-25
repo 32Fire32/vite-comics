@@ -18,7 +18,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../style/partials/mixins.scss" as *;
 .shop {
   width: calc(var(--container-size) / 5);
   @include flexCenter;

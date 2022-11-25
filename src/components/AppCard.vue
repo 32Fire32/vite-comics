@@ -24,9 +24,6 @@ export default {
   flex-direction: column;
   color: #fff;
   padding: 0 10px;
-  // @include media-breakpoint-up(sm){
-  //     width: ;
-  //   }
   .image_card {
     height: 70%;
     overflow: hidden;

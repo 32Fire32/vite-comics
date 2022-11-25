@@ -9,18 +9,59 @@ export default {
   data() {
     return {
       navLinks: [
-        "CHARACTERS",
-        "COMICS",
-        "MOVIES",
-        "TV",
-        "GAMES",
-        "COLLECTIBLES",
-        "VIDEO",
-        "FANS",
-        "NEWS",
-        "SHOP",
+        {
+          link: "CHARACTERS",
+          active: false,
+        },
+        {
+          link: "COMICS",
+          active: false,
+        },
+        {
+          link: "MOVIES",
+          active: false,
+        },
+        {
+          link: "TV",
+          active: false,
+        },
+        {
+          link: "GAMES",
+          active: false,
+        },
+        {
+          link: "COLLECTIBLES",
+          active: false,
+        },
+        {
+          link: "VIDEO",
+          active: false,
+        },
+        {
+          link: "FANS",
+          active: false,
+        },
+        {
+          link: "NEWS",
+          active: false,
+        },
+        {
+          link: "SHOP",
+          active: false,
+        },
       ],
     };
+  },
+  methods: {
+    changeButton(index) {
+      this.navLinks.forEach((elm, i) => {
+        if (i === index) {
+          elm.active = true;
+        } else {
+          elm.active = false;
+        }
+      });
+    },
   },
 };
 </script>
@@ -34,8 +75,13 @@ export default {
       <nav>
         <AppBlue />
         <ul class="nav_header">
-          <li v-for="link in navLinks">
-            <a href="#">{{ link }}</a>
+          <li v-for="(link, index) in navLinks">
+            <a
+              href="#"
+              :class="{ active: link.active }"
+              @click.prevent="changeButton(index)"
+              >{{ link.link }}</a
+            >
           </li>
         </ul>
       </nav>
@@ -58,21 +104,21 @@ header {
 }
 nav {
   position: relative;
+  .active {
+    color: var(--primary-color);
+  }
 }
 
 ul {
   display: flex;
 
   li {
+    position: relative;
     list-style: none;
     margin: 0 20px;
     color: var(--secondary-color);
     font-weight: bold;
     font-size: 10px;
-    &:nth-child(2) {
-      color: var(--primary-color);
-    }
-
     a {
       text-decoration: none;
       color: inherit;

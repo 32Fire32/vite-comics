@@ -9,8 +9,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../style/partials/mixins.scss" as *;
-
 button {
   @include btn;
   font-weight: bolder;

@@ -121,8 +121,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../style/partials/mixins.scss" as *;
-
 main {
   background-color: #000;
 }
