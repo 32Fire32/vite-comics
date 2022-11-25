@@ -111,11 +111,26 @@ export default {
         </div>
       </div>
     </div>
+    <div class="button">
+      <button>LOAD MORE</button>
+    </div>
   </main>
 </template>
 
 <style scoped lang="scss">
 @use "../style/partials/mixins.scss" as *;
+
+main {
+  background-color: #000;
+}
+.button {
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  button {
+    @include btn;
+  }
+}
 .content {
   .jumbo {
     width: 100%;
@@ -128,6 +143,7 @@ export default {
     }
   }
   .container {
+    padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
     .cards {

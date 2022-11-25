@@ -10,22 +10,27 @@ export default {
 
 <template>
   <div class="card">
-    <img :src="imgSrc" :alt="text" />
+    <div class="image_card">
+      <img :src="imgSrc" :alt="text" />
+    </div>
     <h3>{{ text }}</h3>
   </div>
 </template>
 
 <style scoped lang="scss">
 .card {
-  height: 100px;
   width: calc(var(--container-size) / 6);
-  border: 1px solid;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  color: #fff;
+  padding: 0 10px;
+  .image_card {
+    height: 70%;
+    overflow: hidden;
+  }
   img {
     object-fit: cover;
-    height: 100%;
+    width: 100%;
   }
 }
 </style>

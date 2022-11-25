@@ -1,4 +1,10 @@
 @mixin flexCenter {
-    display: flex ;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+@mixin btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
 }
