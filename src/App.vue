@@ -18,6 +18,6 @@ export default {
 </template>
 
 <style lang="scss">
-    @import './style/global.scss';
+    // @import './style/global.scss';
 </style>
 
