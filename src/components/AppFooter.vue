@@ -131,11 +131,11 @@ export default {
   background-color: var(--primary-color);
   .container {
     display: flex;
-    justify-content: space-between;
     padding: 30px 0;
     .shop-link {
-      color: #fff;
       @include flexCenter;
+      color: #fff;
+      width: calc(var(--container-size) / 5);
     }
   }
 }
